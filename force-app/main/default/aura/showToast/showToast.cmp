@@ -13,7 +13,7 @@
  For full license text, see LICENSE.txt file in the repo root  or https://opensource.org/licenses/BSD-3-Clause
 
 -->
-<aura:component implements="lightning:availableForFlowActions">
+<aura:component implements="flexipage:availableForAllPageTypes,lightning:availableForFlowActions,force:hasRecordId" access="global">
     <aura:attribute name="type" type="string" default="success" />
     <aura:attribute name="title" type="string" />
     <aura:attribute name="message" type="string" />    
