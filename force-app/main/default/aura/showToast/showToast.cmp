@@ -13,13 +13,20 @@
  For full license text, see LICENSE.txt file in the repo root  or https://opensource.org/licenses/BSD-3-Clause
 
 -->
-<aura:component implements="flexipage:availableForAllPageTypes,lightning:availableForFlowActions,force:hasRecordId" access="global">
-    <aura:attribute name="type" type="string" default="success" />
-    <aura:attribute name="title" type="string" />
-    <aura:attribute name="message" type="string" />    
-    <aura:attribute name="key" type="string" default="" />
-    <aura:attribute name="mode" type="string" default="dismissable" />
-    <aura:attribute name="duration" type="string" default="10" />
-    <aura:attribute name="urlLink" type="string" />
-    <aura:attribute name="urlLabel" type="string" />
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,lightning:availableForFlowScreens" access="global">
+    <!-- Add force:showToast interface -->
+    <aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,lightning:availableForFlowScreens,force:hasRecordId" access="global">
+    
+    <!-- Attributes -->
+    <aura:attribute name="type" type="String" default="info" description="Possible values are: error, warning, success, info" />
+    <aura:attribute name="title" type="String" default="" description="The title of the toast" />
+    <aura:attribute name="message" type="String" required="true" description="The message to display in the toast. To include a link, add {url} to your message" />
+    <aura:attribute name="duration" type="Integer" default="5" description="The number of seconds the toast is displayed (in seconds). Max is 10." />
+    <aura:attribute name="mode" type="String" default="dismissable" description="Possible values are: dismissable, pester, sticky" />
+    <aura:attribute name="key" type="String" default="info" description="The key for the current toast" />
+    <aura:attribute name="urlLink" type="String" default="" description="The URL to navigate to when clicked" />
+    <aura:attribute name="urlLabel" type="String" default="" description="The label for the URL" />
+    
+    <!-- Handler for initialization -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
 </aura:component>
