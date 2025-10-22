@@ -23,7 +23,7 @@
             var key = component.get("v.key").toLowerCase();   //force user entered attribute to all lowercase
 
             // Validate duration
-            if (duration > 10000) { // Max 10 seconds
+            if (duration > 120000) { // Max 120 seconds
                 duration = 10000;
             }
 
