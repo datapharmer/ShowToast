@@ -13,13 +13,13 @@
  For full license text, see LICENSE.txt file in the repo root  or https://opensource.org/licenses/BSD-3-Clause
 
 -->
-    <!-- Add force:showToast interface -->
-    <aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,lightning:availableForFlowScreens,force:hasRecordId" access="global">
+<!-- Add force:showToast interface -->
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,lightning:availableForFlowScreens,force:hasRecordId" access="global">
     
-    <!-- Attributes -->
+    <!-- Attributes with default values -->
     <aura:attribute name="type" type="String" default="info" description="Possible values are: error, warning, success, info" />
     <aura:attribute name="title" type="String" default="" description="The title of the toast" />
-    <aura:attribute name="message" type="String" required="true" description="The message to display in the toast. To include a link, add {url} to your message" />
+    <aura:attribute name="message" type="String" default="Default notification message" description="The message to display in the toast. To include a link, add {url} to your message" />
     <aura:attribute name="duration" type="Integer" default="5" description="The number of seconds the toast is displayed (in seconds). Max is 10." />
     <aura:attribute name="mode" type="String" default="dismissable" description="Possible values are: dismissable, pester, sticky" />
     <aura:attribute name="key" type="String" default="info" description="The key for the current toast" />
