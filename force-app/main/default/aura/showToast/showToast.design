@@ -16,7 +16,7 @@
                       description="The title of the toast message" />
     <design:attribute name="message" label="Message" 
                       description="The message to display in the toast. Use {url} to include a link" 
-                      required="true" />
+                      default="Default notification message" />
     <design:attribute name="duration" label="Duration (seconds)" 
                       description="How long to show the toast (max 10 seconds)" 
                       default="5" />
@@ -24,6 +24,9 @@
                       description="How the toast can be dismissed" 
                       datasource="dismissable,pester,sticky"
                       default="dismissable" />
+    <design:attribute name="key" label="Toast Key" 
+                      description="Unique key for the toast notification"
+                      default="info" />
     <design:attribute name="urlLink" label="URL" 
                       description="The URL to navigate to when clicked (if using {url} in message)" />
     <design:attribute name="urlLabel" label="URL Label" 
