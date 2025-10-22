@@ -7,13 +7,25 @@
  For full license text, see LICENSE.txt file in the repo root  or https://opensource.org/licenses/BSD-3-Clause
 
 -->
-<design:component >
-    <design:attribute name="type" label="Type (success, error, warning, info, other)" default="success" />
-    <design:attribute name="title" label="Title" />
-    <design:attribute name="message" label="Message" />
-    <design:attribute name="key" label="Icon (only for Type=other)" />
-    <design:attribute name="mode" label="Dismissal Mode (dismissible, pester, sticky)" default="dismissible" />
-    <design:attribute name="duration" label="Duration in Seconds (minimum is 5, default is 10)" default="10" />
-    <design:attribute name="urlLink" label="URL Link" />
-    <design:attribute name="urlLabel" label="URL Label" />
+<design:component label="Show Toast">
+    <design:attribute name="type" label="Toast Type" 
+                      description="The type of toast to display" 
+                      datasource="success,error,warning,info"
+                      default="info" />
+    <design:attribute name="title" label="Title" 
+                      description="The title of the toast message" />
+    <design:attribute name="message" label="Message" 
+                      description="The message to display in the toast. Use {url} to include a link" 
+                      required="true" />
+    <design:attribute name="duration" label="Duration (seconds)" 
+                      description="How long to show the toast (max 10 seconds)" 
+                      default="5" />
+    <design:attribute name="mode" label="Display Mode" 
+                      description="How the toast can be dismissed" 
+                      datasource="dismissable,pester,sticky"
+                      default="dismissable" />
+    <design:attribute name="urlLink" label="URL" 
+                      description="The URL to navigate to when clicked (if using {url} in message)" />
+    <design:attribute name="urlLabel" label="URL Label" 
+                      description="The text to display for the URL link" />
 </design:component>
