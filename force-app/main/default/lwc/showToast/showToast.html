@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Show Toast Example" icon-name="utility:notification">
+        <div class="slds-p-around_medium">
+            <lightning-button 
+                label="Show Success Toast" 
+                onclick={handleShowSuccessToast}
+                variant="success"
+                class="slds-m-right_small">
+            </lightning-button>
+
+            <lightning-button 
+                label="Show Error Toast" 
+                onclick={handleShowErrorToast}
+                variant="destructive">
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template>
