@@ -10,26 +10,4 @@
         <target>lightning__RecordPage</target>
         <target>lightning__HomePage</target>
     </targets>
-    <targetConfigs>
-        <targetConfig targets="lightning__FlowScreen,lightning__RecordPage,lightning__AppPage,lightning__HomePage">
-            <property name="type" type="String" label="Toast Type" description="Type of toast (success, error, warning, info)" default="info" required="true" />
-            <property name="title" type="String" label="Title" description="The title of the toast" required="true" />
-            <property name="message" type="String" label="Message" description="The message to display in the toast. Use {url} to include a link" required="true" />
-            <property name="duration" type="Integer" label="Duration (seconds)" description="How long to show the toast (max 120 seconds)" default="5" required="true" />
-            <property name="mode" type="String" label="Mode" description="The toast mode (dismissable, pester, sticky)" default="dismissable" required="true" />
-            <property name="key" type="String" label="Key" description="The toast key for grouping similar toasts" required="false" />
-            <property name="urlLink" type="String" label="URL" description="The URL to use when {url} is in the message" required="false" />
-            <property name="urlLabel" type="String" label="URL Label" description="The label to show for the URL" required="false" />
-        </targetConfig>
-        <targetConfig targets="lightning__FlowActionButton">
-            <property name="type" type="String" label="Toast Type" description="Type of toast (success, error, warning, info)" default="info" required="true" />
-            <property name="title" type="String" label="Title" description="The title of the toast" required="true" />
-            <property name="message" type="String" label="Message" description="The message to display in the toast. Use {url} to include a link" required="true" />
-            <property name="duration" type="Integer" label="Duration (seconds)" description="How long to show the toast (max 120 seconds)" default="5" required="true" />
-            <property name="mode" type="String" label="Mode" description="The toast mode (dismissable, pester, sticky)" default="dismissable" required="true" />
-            <property name="key" type="String" label="Key" description="The toast key for grouping similar toasts" required="false" />
-            <property name="urlLink" type="String" label="URL" description="The URL to use when {url} is in the message" required="false" />
-            <property name="urlLabel" type="String" label="URL Label" description="The label to show for the URL" required="false" />
-        </targetConfig>
-    </targetConfigs>
 </LightningComponentBundle>
