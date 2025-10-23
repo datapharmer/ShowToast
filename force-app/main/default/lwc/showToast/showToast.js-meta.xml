@@ -4,12 +4,11 @@
     <isExposed>true</isExposed>
     <masterLabel>Show Toast</masterLabel>
     <description>Display toast notifications in Lightning Experience</description>
-    <targets>
-        <target>lightning__FlowScreen</target>
-        <target>lightning__RecordPage</target>
+<targets>
+        <target>lightning__FlowAction</target> 
         <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
         <target>lightning__HomePage</target>
-        <target>lightning__FlowActionButton</target>
     </targets>
     <targetConfigs>
         <targetConfig targets="lightning__FlowScreen,lightning__RecordPage,lightning__AppPage,lightning__HomePage">
